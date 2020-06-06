@@ -1,35 +1,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Toki Pona - lessons (English)
-%% 
+%%
 %%
 %% apt-get install texlive-latex-base texlive-latex-extra texlive-luatex texlive-latex-extra texlive-pstricks rubber latex2html texlive-lang-german latex-xcolor
-%% 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper, 10pt]{book} 
+\documentclass[a4paper, 10pt]{book}
 %\usepackage{ngerman}
 \usepackage{ulem}
 \usepackage{supertabular}
-\usepackage[latin1]{inputenc}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{microtype}
 % Indexverzeichnis erstellen:
 \usepackage{makeidx}
-\makeindex 
+\makeindex
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% html is for the html tags 
-\usepackage{html}
-% hyperref is for the hyperlinks in PDF 
+% hyperref is for the hyperlinks in PDF
 % and have to be the last packet
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{%
-	pdfauthor={ B. J. Knight, Robert Warnke},
-	pdftitle={Toki Pona -- the language of good -- the simple way of life},
-	pdfsubject={Toki Pona -- the language of good -- the simple way of life},
-	pdfkeywords={Toki Pona, a akesi ala ale ali anpa ante anu awen e en ijo ike ilo insa jaki jan jelo jo kala kalama kama kasi ken kepeken kili kin kiwen ko kon kule kulupu kute la lape laso lawa  len lete li lili linja lipu loje lon luka lukin lupa ma mama mani meli mi mije moku moli monsi mu mun musi mute nanpa nasa nasin nena ni nimi noka o oko olin ona open pakala pali palisa pana pi pilin pimeja pini pipi poka poki pona sama seli selo seme sewi sijelo sike sin sina sinpin sitelen sona soweli suli suno supa suwi tan taso tawa telo tenpo toki tomo tu unpa uta utala walo wan waso wawa weka wile },
-	colorlinks=true,
-	urlcolor=blue,
-	urlbordercolor=blue
+    pdfauthor={ B. J. Knight, Robert Warnke},
+    pdftitle={Toki Pona -- the language of good -- the simple way of life},
+    pdfsubject={Toki Pona -- the language of good -- the simple way of life},
+    pdfkeywords={Toki Pona, a akesi ala ale ali anpa ante anu awen e en ijo ike ilo insa jaki jan jelo jo kala kalama kama kasi ken kepeken kili kin kiwen ko kon kule kulupu kute la lape laso lawa  len lete li lili linja lipu loje lon luka lukin lupa ma mama mani meli mi mije moku moli monsi mu mun musi mute nanpa nasa nasin nena ni nimi noka o oko olin ona open pakala pali palisa pana pi pilin pimeja pini pipi poka poki pona sama seli selo seme sewi sijelo sike sin sina sinpin sitelen sona soweli suli suno supa suwi tan taso tawa telo tenpo toki tomo tu unpa uta utala walo wan waso wawa weka wile },
+    colorlinks=true,
+    urlcolor=blue,
+    urlbordercolor=blue
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,20 +47,20 @@
 \setlength{\footskip}{20mm}
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{2.0ex plus 1.0ex minus 0.5ex}
-\batchmode
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{
-Toki Pona \\  \\ 
-The Simplest Language in the World \\ 
-Grammar and Vocabulary Lessons \\
+    Toki Pona \\
+    The Simplest Language in the World \\
+    Grammar and Vocabulary Lessons \\
 }
 \author{
-Author of the original lessons: \\ B. J. Knight (jan Pije), USA \cite{www:Pije:01} \\  
-\and
-\LaTeX, Updates, Additions and \LaTeX layout: \\ Robert Warnke (jan Lope), Germany \cite{www:rowa:01} \\ 
-\and
-These lessons (first edition 2004) are based on the lessons of jan Pije (2003) and \\ 
-the offical Toki Pona book (first English edition 2014) of Sonja Lang \cite{www:tokipona.org} 
+    Author of the original lessons: \\ B. J. Knight (jan Pije), USA \cite{www:Pije:01} \\
+    \and
+    \LaTeX, Updates, Additions and \LaTeX layout: \\ Robert Warnke (jan Lope), Germany \cite{www:rowa:01} \\
+    \and
+    These lessons (first edition 2004) are based on the lessons of jan Pije (2003) and \\
+    the offical Toki Pona book (first English edition 2014) of Sonja Lang \cite{www:tokipona.org}
 }
 
 %
@@ -69,7 +69,7 @@ the offical Toki Pona book (first English edition 2014) of Sonja Lang \cite{www:
 \today
 \maketitle
 \tableofcontents
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Lessons}

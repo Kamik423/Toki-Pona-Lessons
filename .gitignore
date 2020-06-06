@@ -61,3 +61,12 @@ _build/
 toki-pona-lessons_en/
 toki-pona-lessons_de/
 
+# general
+._*
+
+# custom latex build
+.aux_LaTeX
+
+# macOS
+.DS_Store
+.Trashes
