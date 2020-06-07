@@ -1,25 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-%% Toki Pona - lessons (English)
-%%
-%%
-%% apt-get install texlive-latex-base texlive-latex-extra texlive-luatex texlive-latex-extra texlive-pstricks rubber latex2html texlive-lang-german latex-xcolor
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper, 10pt]{book}
-%\usepackage{ngerman}
 \usepackage{ulem}
 \usepackage{supertabular}
 \usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage{microtype}
-% Indexverzeichnis erstellen:
 \usepackage{makeidx}
-\makeindex
 \usepackage{graphicx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% hyperref is for the hyperlinks in PDF
-% and have to be the last packet
 \usepackage{hyperref}
 \usepackage{xcolor}
 \hypersetup{%
@@ -31,13 +17,10 @@
     urlcolor=blue,
     urlbordercolor=blue
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \makeindex
 \graphicspath{{images/}}
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\topmargin}{-19mm}
 \setlength{\headheight}{5mm}
 \setlength{\headsep}{10mm}
@@ -49,7 +32,6 @@
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{2.0ex plus 1.0ex minus 0.5ex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{
     Toki Pona \\
     The Simplest Language in the World \\
@@ -64,17 +46,12 @@
     the offical Toki Pona book (first English edition 2014) of Sonja Lang \cite{www:tokipona.org}
 }
 
-%
 \date
-% \thanks{}
 \today
 \maketitle
 \tableofcontents
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Lessons}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{chapters/1-01-introduction}
 \include{chapters/1-02-pronunciation_alphabet}
 \include{chapters/1-03-basic_sentences}
@@ -97,14 +74,9 @@
 \include{chapters/1-20-la}
 \include{chapters/1-21-conclusion}
 \include{chapters/1-22-answers}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \appendix
 \chapter{Appendix}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%%%\include{leavings}
-%
 \include{chapters/2-01-dict}
 \include{chapters/2-02-thematic_dict}
 \include{chapters/2-03-proverbs}
@@ -112,13 +84,8 @@
 \include{chapters/2-05-tokiponization-guide}
 \include{chapters/2-06-texts}
 \include{chapters/2-07-hieroglyphs}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \bibliography{toki-pona-lessons}
 \bibliographystyle{plain}
 \printindex
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% eof
