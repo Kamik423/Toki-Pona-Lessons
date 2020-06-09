@@ -1,56 +1,14 @@
-\documentclass[a4paper, 10pt]{book}
-\usepackage{ulem}
-\usepackage{supertabular}
-\usepackage{fontspec}
-\usepackage{graphicx}
-\usepackage{microtype}
-\usepackage{makeidx}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{%
-    pdfauthor={ B. J. Knight, Robert Warnke},
-    pdftitle={Toki Pona -- the language of good -- the simple way of life},
-    pdfsubject={Toki Pona -- the language of good -- the simple way of life},
-    pdfkeywords={Toki Pona, a akesi ala ale ali anpa ante anu awen e en ijo ike ilo insa jaki jan jelo jo kala kalama kama kasi ken kepeken kili kin kiwen ko kon kule kulupu kute la lape laso lawa  len lete li lili linja lipu loje lon luka lukin lupa ma mama mani meli mi mije moku moli monsi mu mun musi mute nanpa nasa nasin nena ni nimi noka o oko olin ona open pakala pali palisa pana pi pilin pimeja pini pipi poka poki pona sama seli selo seme sewi sijelo sike sin sina sinpin sitelen sona soweli suli suno supa suwi tan taso tawa telo tenpo toki tomo tu unpa uta utala walo wan waso wawa weka wile },
-    colorlinks=true,
-    urlcolor=blue,
-    urlbordercolor=blue
-}
+\input{chapters/0-00-preamble}
 
-\makeindex
-\graphicspath{{images/}}
 \begin{document}
-\setlength{\topmargin}{-19mm}
-\setlength{\headheight}{5mm}
-\setlength{\headsep}{10mm}
-\setlength{\textheight}{245mm}
-\setlength{\textwidth}{155mm}
-\setlength{\oddsidemargin}{5mm}
-\setlength{\evensidemargin}{-1mm}
-\setlength{\footskip}{20mm}
-\setlength{\parindent}{0mm}
-\setlength{\parskip}{2.0ex plus 1.0ex minus 0.5ex}
 
-\title{
-    Toki Pona \\
-    The Simplest Language in the World \\
-    Grammar and Vocabulary Lessons \\
-}
-\author{
-    Author of the original lessons: \\ B. J. Knight (jan Pije), USA \cite{www:Pije:01} \\
-    \and
-    \LaTeX, Updates, Additions and \LaTeX layout: \\ Robert Warnke (jan Lope), Germany \cite{www:rowa:01} \\
-    \and
-    These lessons (first edition 2004) are based on the lessons of jan Pije (2003) and \\
-    the offical Toki Pona book (first English edition 2014) of Sonja Lang \cite{www:tokipona.org}
-}
+\input{chapters/0-01-cover}
 
-\date
-\today
-\maketitle
-\tableofcontents
+\frontmatter
+\input{chapters/0-02-titlepage}
+\input{chapters/0-03-table_of_contents}
 
+\mainmatter
 \chapter{Lessons}
 \include{chapters/1-01-introduction}
 \include{chapters/1-02-pronunciation_alphabet}
@@ -87,5 +45,7 @@
 
 \bibliography{toki-pona-lessons}
 \bibliographystyle{plain}
+
 \printindex
+
 \end{document}

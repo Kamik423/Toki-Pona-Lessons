@@ -1,0 +1,97 @@
+%!TEX root = ../toki-pona-lessons.tex
+
+\newgeometry{margin=0mm}
+% \begin{titlepage}%
+%     \begin{tikzpicture}[remember picture,overlay]
+%         \node [shape=rectangle, fill=tpyellow, minimum width=\paperwidth, minimum height=\paperheight, anchor=north west] at (current page.north west) {};
+%         \foreach \x in {-1,...,25} {
+%                 \foreach \y in {-25,...,-5} {
+%                         \draw[tpgray, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x,1.7320508076 * \y) circle (0.4cm);
+%                         \draw[tpgray, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x + 0.5,0.8660254038 + 1.7320508076 * \y) circle (0.4cm);
+%                     }
+%             }
+%         \begin{scope}[shift={(0,0)},rotate=45]
+%             \foreach \x in {-15,...,0} {
+%                     \foreach \y in {-20,...,0} {
+%                             \draw[tpturquoise, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x,1.7320508076 * \y) circle (0.4cm);
+%                             \draw[tpturquoise, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x + 0.5,0.8660254038 + 1.7320508076 * \y) circle (0.4cm);
+%                         }
+%                 }
+%         \end{scope}
+%         \begin{scope}[shift={(-20,0)},rotate=-45]
+%             \foreach \x in {25,...,40} {
+%                     \foreach \y in {0,...,25} {
+%                             \draw[tpblue, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x,1.7320508076 * \y) circle (0.4cm);
+%                             \draw[tpblue, opacity={sin(\x * \y * 10) * 0.5 + 0.5}] (\x + 0.5,0.8660254038 + 1.7320508076 * \y) circle (0.4cm);
+%                         }
+%                 }
+%         \end{scope}
+%         \node [shape=rectangle, fill=tpblue, minimum width=\paperwidth, minimum height=.33333\paperheight, anchor=north west] at (current page.north west) {};
+%         \node [shape=rectangle, fill=tpblue, minimum width=\paperwidth, minimum height=.1\paperheight, anchor=south west] at (current page.south west) {};
+%     \end{tikzpicture}%
+%     \begin{center}
+%         \vspace{2cm}
+
+%         \color{tpyellow}
+%         {%
+%             \fontsize{60pt}{60pt}\selectfont\bfseries
+%             Toki Pona\\[2cm]
+%         }
+%         {%
+%             \fontsize{20pt}{20pt}\selectfont%
+%             The Simplest Language in the World\\[5mm]
+%             Grammar and Vocabulary Lessons
+%         }
+
+%         \vfill
+
+%         \includegraphics[width=0.4\textwidth]{images/toki-pona-logo-color}
+
+%         \vfill
+
+%         {%
+%             \fontsize{20pt}{20pt}\selectfont%
+%             Sonja Lang (\texttp{jan Sonja}), B. J. Knight (\texttp{jan Pije}),\\
+%             Robert Warnke (\texttp{jan Lope}), Hans Schülein (\texttp{jan San})
+%         }
+
+%         \vspace{7mm}
+%     \end{center}
+% \end{titlepage}
+\begin{titlepage}%
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=east,inner sep=0] at ([xshift=1mm]current page.east) {\includegraphics[height=\paperheight+2mm]{cover-tweaked}};
+        % https://pixabay.com/photos/woman-umbrella-floating-jumping-1245817/
+        %
+    \end{tikzpicture}%
+    \begin{center}
+        \vspace{1.25cm}
+
+        % \color{tpblue}
+        {%
+            \fontsize{110pt}{110pt}\selectfont\bfseries
+            Toki Pona
+        }\\[1.475cm]
+        {%
+        \fontsize{25pt}{25pt}\selectfont%
+        The Simplest Language in the World\\[6mm]
+        Grammar and Vocabulary Lessons
+        }
+
+        \vfill
+
+        {%
+            \fontsize{12pt}{12pt}\selectfont%
+            Sonja Lang (\texttp{jan Sonja}),
+            B. J. Knight (\texttp{jan Pije}),
+            Robert Warnke (\texttp{jan Lope}),
+            Hans Schülein (\texttp{jan San})
+        }
+
+        \vspace{7mm}
+    \end{center}
+\end{titlepage}
+\restoregeometry
+
+% Page trailing the cover
+\thispagestyle{empty}
