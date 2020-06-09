@@ -26,7 +26,6 @@ tmp.*
 *.dvi
 *.ps
 *.eps
-*.pdf
 *.bbl
 *.blg
 *.bcf
