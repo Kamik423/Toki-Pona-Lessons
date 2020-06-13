@@ -28,7 +28,7 @@
 
 \usepackage{DejaVuSansMono}
 \usepackage[light]{merriweather}
-\usepackage[default,oldstyle]{opensans}
+\usepackage[default, oldstyle]{opensans}
 \setmonofont[Scale=0.95]{DejaVu Sans Mono}
 
 \usepackage{titling}
@@ -51,6 +51,7 @@
 \usepackage{tikz}
 \usepackage{titlesec}
 \usepackage{ulem}
+\usepackage{verbatimbox}
 \usepackage{qrcode}
 
 \usepackage{array}
@@ -61,14 +62,13 @@
 
 \graphicspath{{images/}}
 
-% \titleformat{\chapter}[block]{\normalfont\huge\bfseries}{\thechapter}{0pt}{\hspace{20pt}\huge}
 \titlespacing*{\chapter}{0pt}{0pt}{30pt}
 \sectionfont{\color{tppink}}
 % \subsectionfont{\color{tppink}}
 
 % Use to format toki pona text
-\newcommand{\tpfamily}{\merriweather}
-\newcommand{\texttp}[1]{{\tpfamily#1}}
+\newcommand{\tpfamily}{\merriweather\addfontfeature{Scale=0.97}}
+\DeclareTextFontCommand{\texttp}{\tpfamily}
 
 % Mark words like ``separator'' or ``adverb'' in table
 \newcommand{\wordtype}[1]{\mbox{\color{tppink}\textit{#1}}}
@@ -78,7 +78,9 @@
 \newcommand{\wordrule}{\\[-1.2em]\specialrule{2pt}{0pt}{0pt}\\[-1em]}
 
 \NewEnviron{vocabularytable}{%
-    \begin{table}[H]
+
+    \noindent%
+    \addvbuffer[1ex]{%
         \setlength{\fboxsep}{0pt}%
         \colorbox{tpgray}{%
             \arrayrulecolor{white}%
@@ -87,12 +89,15 @@
                 \BODY
             \end{tabularx}%
             \arrayrulecolor{black}%
-        }%
-    \end{table}%
+        }
+    }
+
     \noindent%
 }
 \NewEnviron{translationtable}{%
-    \begin{table}[H]
+
+    \noindent%
+    \addvbuffer[1ex]{%
         \setlength{\fboxsep}{0pt}%
         \colorbox{tpgray}{%
             \arrayrulecolor{white}%
@@ -101,8 +106,9 @@
                 \BODY
             \end{tabularx}%
             \arrayrulecolor{black}%
-        }%
-    \end{table}%
+        }
+    }
+
     \noindent%
 }
 
@@ -133,7 +139,9 @@
     \checkoddpage
     \begin{question}[subtitle={(Answers: Page~\pageref{exerciseanswer\CurrentQuestionID})\marginnote{\normalfont\selectfont\color{tppink}\Large\ifoddpage{\HandPencilLeft}\else{\reflectbox{\HandPencilLeft}}\fi}}]
         #1
-        \begin{table}[H]
+
+        \noindent%
+        \addvbuffer[1ex]{%
             \setlength{\fboxsep}{0pt}%
             \colorbox{tpgray}{%
                 \arrayrulecolor{white}%
@@ -142,14 +150,16 @@
                     #2
                 \end{tabularx}%
                 \arrayrulecolor{black}%
-            }%
-        \end{table}
+            }
+        }
+
     \end{question}
     \renewcommand{\answer}[1]{\answerstyle{##1}}
     \renewcommand{\showanswer}[1]{\answerstyle{##1}}
     \begin{solution}
         \label{exerciseanswer\CurrentQuestionID}
-        \begin{table}[H]
+        \noindent%
+        \addvbuffer[1ex]{%
             \setlength{\fboxsep}{0pt}%
             \colorbox{tpgray}{%
                 \arrayrulecolor{white}%
@@ -158,8 +168,9 @@
                     #2
                 \end{tabularx}%
                 \arrayrulecolor{black}%
-            }%
-        \end{table}
+            }
+        }
+
     \end{solution}
 }
 
