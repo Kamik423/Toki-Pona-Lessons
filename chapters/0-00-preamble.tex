@@ -42,11 +42,14 @@
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{ifoddpage}
+\usepackage{longtable}\setlength{\LTpre}{0pt}\setlength{\LTpost}{0pt}
 \usepackage[fulladjust]{marginnote}
 \usepackage{multirow}
 \usepackage{sectsty}
 \usepackage{supertabular}
+\usepackage{tabu}
 \usepackage{tabularx}
+\usepackage{tcolorbox}\tcbuselibrary{breakable}
 \usepackage{textcomp}
 \usepackage{tikz}
 \usepackage{titlesec}
@@ -77,38 +80,40 @@
 % \newcommand{\wordrule}{\\[-1.2em]\noalign{\color{white}\hrule height 2pt}\\[-1em]}
 \newcommand{\wordrule}{\\[-1.2em]\specialrule{2pt}{0pt}{0pt}\\[-1em]}
 
-\NewEnviron{vocabularytable}{%
-
+\newenvironment{tablebox}{
+    \begin{tcolorbox}[
+            width=\linewidth,
+            size=minimal,
+            colback=tpgray,
+            opacityframe=0.0,
+            before skip=1ex,
+            after skip=1ex,
+            breakable,
+        ]%
+        \arrayrulecolor{white}%
+        }{
+        \arrayrulecolor{black}%
+    \end{tcolorbox}%
     \noindent%
-    \addvbuffer[1ex]{%
-        \setlength{\fboxsep}{0pt}%
-        \colorbox{tpgray}{%
-            \arrayrulecolor{white}%
-            \begin{tabularx}{\linewidth}{l!{\color{white}\vrule width 2pt}X}
-                \hspace{1.5cm} & \\[-1.1em] % Same hack as \wordrule, minimal column width
-                \BODY
-            \end{tabularx}%
-            \arrayrulecolor{black}%
-        }
-    }
+}
 
+\NewEnviron{vocabularytable}{%
+    \begin{tablebox}%
+        \begin{tabularx}{\linewidth}{l!{\color{white}\vrule width 2pt}X}
+            \hspace{1.5cm} & \\[-1.1em] % Same hack as \wordrule, minimal column width
+            \BODY
+        \end{tabularx}%
+    \end{tablebox}%
     \noindent%
 }
 \NewEnviron{translationtable}{%
 
-    \noindent%
-    \addvbuffer[1ex]{%
-        \setlength{\fboxsep}{0pt}%
-        \colorbox{tpgray}{%
-            \arrayrulecolor{white}%
-            \begin{tabularx}{\linewidth}{X!{\color{white}\vrule width 2pt}X}
-                \\[-1.1em] % Same hack as \wordrule
-                \BODY
-            \end{tabularx}%
-            \arrayrulecolor{black}%
-        }
-    }
-
+    \begin{tablebox}%
+        \begin{tabularx}{\linewidth}{X!{\color{white}\vrule width 2pt}X}
+            \\[-1.1em] % Same hack as \wordrule
+            \BODY
+        \end{tabularx}%
+    \end{tablebox}%
     \noindent%
 }
 
@@ -128,8 +133,6 @@
 }
 \SetupExSheets[solution]{
     name=Solution for Practice,
-    pre-hook=\noindent\begin{minipage}{\linewidth},
-        post-body-hook=\end{minipage},
 }
 % I tried to do this as an environment, but I could not get it to work using \BODY twice in a nice way.
 \newcommand{\practice}[2][Please write down your answers and check them afterwards.]{
@@ -140,43 +143,22 @@
     \begin{question}[subtitle={(Answers: Page~\pageref{exerciseanswer\CurrentQuestionID})\marginnote{\normalfont\selectfont\color{tppink}\Large\ifoddpage{\HandPencilLeft}\else{\reflectbox{\HandPencilLeft}}\fi}}]
         #1
 
-        \noindent%
-        \addvbuffer[1ex]{%
-            \setlength{\fboxsep}{0pt}%
-            \colorbox{tpgray}{%
-                \arrayrulecolor{white}%
-                \begin{tabularx}{\linewidth}{X!{\color{white}\vrule width 2pt}X}
-                    \\[-1.1em] % Same hack as \wordrule
-                    #2
-                \end{tabularx}%
-                \arrayrulecolor{black}%
-            }
-        }
-
+        \begin{tablebox}%
+            \begin{tabularx}{\linewidth}{X!{\color{white}\vrule width 2pt}X}
+                \\[-1.1em] % Same hack as \wordrule
+                #2
+            \end{tabularx}%
+        \end{tablebox}
     \end{question}
     \renewcommand{\answer}[1]{\answerstyle{##1}}
     \renewcommand{\showanswer}[1]{\answerstyle{##1}}
     \begin{solution}
-        \label{exerciseanswer\CurrentQuestionID}
-        \noindent%
-        \addvbuffer[1ex]{%
-            \setlength{\fboxsep}{0pt}%
-            \colorbox{tpgray}{%
-                \arrayrulecolor{white}%
-                \begin{tabularx}{\linewidth}{X!{\color{white}\vrule width 2pt}X}
-                    \\[-1.1em] % Same hack as \wordrule
-                    #2
-                \end{tabularx}%
-                \arrayrulecolor{black}%
-            }
-        }
-
+        \label{exerciseanswer\CurrentQuestionID}%
+        \begin{tablebox}%
+            \begin{longtable}{L{.48\linewidth}!{\color{white}\vrule width 2pt}L{.48\linewidth}}%
+                \\[-1.1em] % Same hack as \wordrule
+                #2
+            \end{longtable}%
+        \end{tablebox}%
     \end{solution}
 }
-
-% \pagestyle{fancy}
-% \fancyhf{}
-% \fancyhead[LE,RO]{outside}
-% \fancyhead[RE,LO]{inside}
-% \fancyfoot[CE,CO]{\leftmark}
-% \fancyfoot[LE,RO]{\thepage}
