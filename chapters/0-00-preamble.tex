@@ -137,7 +137,7 @@
 % I tried to do this as an environment, but I could not get it to work using \BODY twice in a nice way.
 \newcommand{\practice}[2][Please write down your answers and check them afterwards.]{
     \vspace{2em}
-    \renewcommand{\answer}[1]{\vphantom{\parbox[t]{\linewidth}{##1}}}
+    \renewcommand{\answer}[1]{\vphantom{\parbox[c]{\linewidth}{##1}}}
     \renewcommand{\showanswer}[1]{\answerstyle{##1}\answer{}}
     \checkoddpage
     \begin{question}[subtitle={(Answers: Page~\pageref{exerciseanswer\CurrentQuestionID})\marginnote{\normalfont\selectfont\color{tppink}\Large\ifoddpage{\HandPencilLeft}\else{\reflectbox{\HandPencilLeft}}\fi}}]
