@@ -66,6 +66,9 @@ toki-pona-lessons_de/
 # custom latex build
 .aux_LaTeX
 
+# Old pdf, for comparison
+toki-pona-lessons_en.pdf
+
 # macOS
 .DS_Store
 .Trashes
